@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cherry Cream Soda', cursive;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  /* background: linear-gradient(#e66465, #9198e5); */
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);  
+}
+
+.calculator > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #fff;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+
+}
+
+.calculator > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 2555, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: #fff;
+  font-size: 2.5rem;
+}
